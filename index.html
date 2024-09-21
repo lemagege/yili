@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>毅利计划</title>
+  </head>
+<style>
+
+body{
+  width:100;
+  height:100;
+  text-align:center;
+  background-image:url("https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726893286989/713f2af9168df73963404eca40f1f155.jpeg");
+  background-size:cover;
+  background-repeat:no-repeat;
+      background-attachment:fixed;
+  }
+
+h1{ 
+  color:#fff853;
+  }
+h2{
+  
+  color:#00aeff;
+  
+  }
+h6{
+  color:#f900ff;
+  }
+img{
+  width:50%;
+  
+
+  border-radius:50%;
+  
+  }
+p{
+  color:#ff3900;
+  
+  
+  }
+</style>
+  <body>	
+	<h1>毅利计划</h1>
+ <img src="https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1726891915010/995501d6944ca379d89468da3488b8ad1726891846745.jpg"/>
+	<h2>乐马网络</h2> 
+ <h6>当前金额：256 </h6>
+ <h3>送你一句话</h3>
+ <p id="copy"></p>
+  <a href="https://qm.qq.com/q/2N5mgZy4Jy">添加QQ</a>
+  <span id="timeDate"></span><span id="times"></span> 
+<script language="javascript"> 
+ var now = new Date();
+ function createtime(){
+  var grt= new Date("09/01/2024 00:00:00");
+  now.setTime(now.getTime()+250);
+  days = (now - grt ) / 1000 / 60 / 60 / 24;
+  dnum = Math.floor(days);
+  hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum);
+  hnum = Math.floor(hours);
+  if(String(hnum).length ==1 ){hnum = "0" + hnum;}
+  minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+  mnum = Math.floor(minutes);
+  if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+  seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+  snum = Math.round(seconds);
+  if(String(snum).length ==1 ){snum = "0" + snum;}
+  document.getElementById("timeDate").innerHTML = "本网站己运行"+dnum+"天";
+  document.getElementById("times").innerHTML = hnum + "小时" + mnum + "分" + snum + "秒";
+ }
+ setInterval("createtime()",250); 
+ 
+        function generateCopy() {
+            var phrases = [
+                "不负时光 不负自己 砥砺前行 实现辉煌的明天",
+                "心中若有光芒 脚下自有道路 勇往直前 无畏前行",
+                "驾驭命运的舵是奋斗 不抱有幻想 不放弃一点机会，不停止一日努力",
+                "奋斗不止 进步无止境 让人生在追求中焕发光彩",
+                "逆风破浪 成就自己的人生 让未来更加可期",
+                "生命不息 奋斗不止 以梦为马 不负韶华",
+                "在追逐梦想的路上 风雨兼程 只因心中有光，脚下有路",
+                "成功并非遥不可及 只要勇往直前 你便能触及 别停下脚步 勇攀高峰 你的努力终将得到回报",
+           
+            ];
+            var randomIndex = Math.floor(Math.random() * phrases.length);
+            var randomCopy = phrases[randomIndex];
+            document.getElementById("copy").innerHTML = randomCopy;
+        }
+
+        generateCopy();
+</script>
+  
+  </body>
+
+</html>
